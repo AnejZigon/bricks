@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zombie_apocalypse</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Zombie apocalypse</h1>
+        <div id="stats">
+			<div class="levo-stats">
+				<div class="stat-kvadrat">Točke: <span id="tocke">0</span></div>
+				<div class="stat-kvadrat">Čas: <span id="cas">00:00</span></div>
+			</div>
+			
+			<div class="sredina-gumbi">
+				<button id="start-btn">Začni igro</button>
+				<button id="navodila-btn">Navodila</button>
+			</div>
+			<div class="desno-prazno"></div>
+		</div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+	
+	<div id="navodila-modal" class="modal">
+		<div class="modal-vsebina">
+			<span class="zapri">&times;</span>
+			<h2>Navodila za igro</h2>
+			<p>1. Uporabi <b>levo in desno puščico</b> za premikanje ploščice.</p>
+			<p>2. Ne dovoli, da zombi žogica pade pod ploščico.</p>
+			<p>3. Uniči vse zombije, da rešiš svet!</p>
+		</div>
+	</div>
+	
+	<div id="konec-modal" class="modal">
+		<div class="modal-vsebina" style="text-align: center;">
+			<h2 id="konec-naslov">Konec igre</h2>
+			<p id="konec-sporocilo"></p>
+			<hr>
+			<p>Tvoj rezultat: <b id="koncne-tocke">0</b> točk</p>
+			<p>Čas igranja: <b id="koncni-cas">00:00</b></p>
+			<button id="restart-btn" class="gumb-v-modalu">Igraj ponovno</button>
+		</div>
+	</div>
+
+    <img id="zogica" src="slike/zogica.png" style="display:none;">
+    <img id="zombie" src="slike/zombie.png" style="display:none;">
+	<img id="igralnobg" src="slike/igralnobg.jpg" style="display:none;">
+
+    <script src="script.js"></script>
+</body>
+</html>
